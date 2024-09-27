@@ -3,80 +3,47 @@ const collections = [
   {
     id: 1,
     title: 'Ephemeral Echoes',
-    description: 'Exploring fleeting moments through conceptual imagery.',
-    image: 'images/ephemeral_echoes.jpg',
-    year: 2023
+    year: 2023,
+    link: 'collections.html#ephemeral-echoes'
   },
   {
     id: 2,
     title: 'Celestial Observations',
-    description: 'A celestial journey through stars and cosmic forces.',
-    image: 'images/celestial_observations.jpg',
-    year: 2022
+    year: 2022,
+    link: 'collections.html#celestial-observations'
   },
   {
     id: 3,
     title: 'Historical Shadows',
-    description: 'Unveiling forgotten history through ancient relics.',
-    image: 'images/historical_shadows.jpg',
-    year: 2021
+    year: 2021,
+    link: 'collections.html#historical-shadows'
   },
   {
     id: 4,
     title: 'Silent Echoes',
-    description: 'The art of stillness and reflection in modern landscapes.',
-    image: 'images/silent_echoes.jpg',
-    year: 2020
+    year: 2020,
+    link: 'collections.html#silent-echoes'
   },
   {
     id: 5,
     title: 'Dreamscapes',
-    description: 'Abstract interpretations of dream-like visions.',
-    image: 'images/dreamscapes.jpg',
-    year: 2019
-  }
-];
-
-// Collection Journal for the archive page
-const archiveEntries = [
-  {
-    title: 'Ephemeral Echoes',
-    dateTime: '2023 - Spring',
-    description: 'This collection captures fleeting moments, turning them into conceptual art that mirrors the temporal nature of life.',
-    image: 'images/ephemeral_echoes.jpg'
-  },
-  {
-    title: 'Celestial Observations',
-    dateTime: '2022 - Summer',
-    description: 'A journey through stars and celestial forces, blending scientific observations with artistic expression.',
-    image: 'images/celestial_observations.jpg'
-  },
-  {
-    title: 'Historical Shadows',
-    dateTime: '2021 - Fall',
-    description: 'An exploration of ancient relics, untold stories, and forgotten shadows from history.',
-    image: 'images/historical_shadows.jpg'
-  },
-  {
-    title: 'Silent Echoes',
-    dateTime: '2020 - Winter',
-    description: 'A collection exploring the silent echoes of solitude and reflective landscapes.',
-    image: 'images/silent_echoes.jpg'
-  },
-  {
-    title: 'Dreamscapes',
-    dateTime: '2019 - Fall',
-    description: 'This collection explores abstract visions drawn from the deep recesses of the mind, portraying the beauty of dream-like states.',
-    image: 'images/dreamscapes.jpg'
+    year: 2019,
+    link: 'collections.html#dreamscapes'
   }
 ];
 
 // Render collections for the main page
-const collectionGrid = document.getElementById('collectionGrid');
+const collectionList = document.getElementById('collectionGrid');
 
 function createCollectionItem(collection) {
-  const collectionItem = document.createElement('div');
+  const collectionItem = document.createElement('a');
   collectionItem.classList.add('collection-item');
+  collectionItem.href = collection.link;
+  collectionItem.innerHTML = `${collection.title} (${collection.year})`;
 
-  collectionItem.innerHTML = `
-    <img src
+  return collectionItem;
+}
+
+collections.forEach((collection) => {
+  collectionList.appendChild(createCollectionItem(collection));
+});
