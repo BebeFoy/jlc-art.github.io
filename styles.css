@@ -6,10 +6,9 @@
 }
 
 body {
-  font-family: 'Georgia', serif;
+  font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333;
-  line-height: 1.6;
   padding: 20px;
 }
 
@@ -21,28 +20,15 @@ body {
 
 /* Header Styles */
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  margin-bottom: 20px;
   font-weight: 300;
   text-align: center;
-  color: #444;
-  margin-bottom: 20px;
 }
 
-header h1 span {
-  font-size: 1.2rem;
-  font-weight: 400;
-  display: block;
-  margin-top: 10px;
-  color: #666;
-}
-
-/* Collection Section */
-#collections {
-  margin-top: 40px;
-}
-
+/* Collections Section */
 #collections h2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
@@ -53,24 +39,17 @@ header h1 span {
 
 #collectionList li {
   border-bottom: 1px solid #ddd;
-  padding: 15px 0;
-  transition: background-color 0.3s ease;
-}
-
-#collectionList li:hover {
-  background-color: #f0f0f0;
+  padding: 10px 0;
 }
 
 #collectionList li a {
   color: #333;
   text-decoration: none;
-  font-weight: bold;
-  display: block;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 #collectionList li a:hover {
-  color: #555;
+  color: #666;
 }
 
 /* Newsletter Section */
@@ -80,22 +59,18 @@ header h1 span {
 
 #newsletter input[type="email"] {
   width: 70%;
-  padding: 12px;
+  padding: 10px;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   margin-right: 10px;
 }
 
 #newsletter button {
-  padding: 12px 20px;
+  padding: 10px 15px;
   font-size: 1rem;
   background-color: #333;
   color: #fff;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 #newsletter button:hover {
