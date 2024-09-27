@@ -1,49 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Collection Details</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>JLC – Art (Jonathan Lejon Christian Art Archive)</title>
 </head>
-
 <body>
-  <main class="container">
     <header>
-      <a href="index.html">← Back to Collections</a>
+        <h1>JLC – Art</h1>
+        <h2>(Jonathan Lejon Christian Art Archive)</h2>
     </header>
 
-    <section id="collectionDetail">
-      <h1>Collection Title</h1>
-      <ul id="entryList">
-        <!-- JavaScript will populate this area with collection entries -->
-      </ul>
-    </section>
-  </main>
+    <nav>
+        <button id="menuButton">Menu</button>
+        <input type="text" id="searchInput" placeholder="Search the Archive">
+    </nav>
 
-  <script>
-    // Get collection ID from URL query
-    const urlParams = new URLSearchParams(window.location.search);
-    const collectionId = urlParams.get('id');
+    <main>
+        <section class="collection-section">
+            <ul class="minimal-collection-list">
+                <li class="minimal-collection-item">
+                    <div class="collection-entry-header">
+                        <h3 class="entry-title">Entry Title 1</h3>
+                        <p class="entry-date">2024-09-27</p>
+                    </div>
+                    <div class="entry-body">
+                        <img src="image-placeholder.jpg" alt="Entry Image 1" class="entry-image-minimal">
+                        <div class="entry-description">
+                            <p>Overview of artwork: This piece explores themes of...</p>
+                        </div>
+                    </div>
+                </li>
 
-    // Find collection by ID
-    const collection = collections.find(col => col.id == collectionId);
-    if (collection) {
-      document.querySelector('h1').textContent = `${collection.title} (${collection.year})`;
+                <li class="minimal-collection-item">
+                    <div class="collection-entry-header">
+                        <h3 class="entry-title">Entry Title 2</h3>
+                        <p class="entry-date">2024-09-20</p>
+                    </div>
+                    <div class="entry-body">
+                        <img src="image-placeholder.jpg" alt="Entry Image 2" class="entry-image-minimal">
+                        <div class="entry-description">
+                            <p>Conceptual insights on the second piece, focusing on...</p>
+                        </div>
+                    </div>
+                </li>
 
-      const entryList = document.getElementById('entryList');
-      collection.entries.forEach((entry) => {
-        const entryItem = document.createElement('li');
-        entryItem.innerHTML = `
-          <div>
-            <time>${entry.date}</time>
-            <h2>${entry.title}</h2>
-            <p>${entry.description}</p>
-            <img src="${entry.image}" alt="${entry.title}" style="width:100%; max-width:600px; margin-top:10px;">
-          </div>
-        `;
-        entryList.appendChild(entryItem);
-      });
-    } else {
-      document
+                <!-- Repeat similar layout for more entries -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <a href="#" id="twitterIcon">Twitter</a>
+            <a href="#" id="instagramIcon">Instagram</a>
+            <a href="#" id="githubIcon">GitHub</a>
+            <a href="#" id="discordIcon">Discord</a>
+            <a href="#" id="youtubeIcon">YouTube</a>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
