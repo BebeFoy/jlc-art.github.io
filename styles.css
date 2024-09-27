@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Georgia', serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
@@ -16,34 +16,41 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* Header Styles */
 header h1 {
-  font-size: 2.5rem;
-  font-weight: 300;
+  font-size: 2.8rem;
+  font-weight: 400;
   text-align: center;
-  color: #444;
-  margin-bottom: 20px;
+  color: #222;
+  margin-bottom: 40px;
+  letter-spacing: 0.05em;
 }
 
 header h1 span {
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 300;
   display: block;
   margin-top: 10px;
   color: #666;
 }
 
-/* Collection Section */
-#collections {
-  margin-top: 40px;
+/* Section Headings */
+h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 20px;
 }
 
-#collections h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+/* Collection Section */
+#collections {
+  margin-bottom: 50px;
 }
 
 #collectionList {
@@ -53,7 +60,7 @@ header h1 span {
 
 #collectionList li {
   border-bottom: 1px solid #ddd;
-  padding: 15px 0;
+  padding: 20px 0;
   transition: background-color 0.3s ease;
 }
 
@@ -67,6 +74,7 @@ header h1 span {
   font-weight: bold;
   display: block;
   transition: color 0.3s ease;
+  font-size: 1.4rem;
 }
 
 #collectionList li a:hover {
@@ -75,20 +83,21 @@ header h1 span {
 
 /* Newsletter Section */
 #newsletter {
-  margin-top: 40px;
+  margin-bottom: 50px;
 }
 
 #newsletter input[type="email"] {
   width: 70%;
-  padding: 12px;
+  padding: 14px;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-right: 10px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 #newsletter button {
-  padding: 12px 20px;
+  padding: 14px 24px;
   font-size: 1rem;
   background-color: #333;
   color: #fff;
@@ -104,15 +113,19 @@ header h1 span {
 
 /* eBay Auction Section */
 #ebay {
-  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+#ebay p {
+  font-size: 1.2rem;
 }
 
 #ebay a {
   color: #0066cc;
   text-decoration: none;
+  font-weight: bold;
 }
 
 #ebay a:hover {
   text-decoration: underline;
 }
-
