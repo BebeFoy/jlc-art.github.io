@@ -19,11 +19,11 @@ body {
   margin: 0 auto;
   padding: 40px 20px;
   background-color: #f9f9f9;
-  border: 1px solid #f9f9f9; /* Blend the border with the background */
+  border: 1px solid #f9f9f9;
   box-shadow: none;
 }
 
-/* Header Section - Clean, Subtle */
+/* Header Section */
 header h1 {
   font-size: 2.2rem;
   font-weight: 300;
@@ -43,7 +43,7 @@ header h1 span {
   opacity: 0.5;
 }
 
-/* Section Titles - Compact and Light */
+/* Section Titles */
 h2 {
   font-size: 1.4rem;
   font-weight: 400;
@@ -53,7 +53,7 @@ h2 {
   opacity: 0.7;
 }
 
-/* Collection Section - Almost Invisible Yet Functional */
+/* Collection Section */
 #collections {
   margin-bottom: 40px;
 }
@@ -88,11 +88,7 @@ h2 {
   color: #444;
 }
 
-/* Newsletter Section - Minimalistic Inputs */
-#newsletter {
-  margin-bottom: 40px;
-}
-
+/* Newsletter Section */
 #newsletter input[type="email"] {
   width: 60%;
   padding: 10px;
@@ -101,7 +97,6 @@ h2 {
   border-radius: 3px;
   background-color: #fff;
   color: #333;
-  box-shadow: none;
 }
 
 #newsletter button {
@@ -112,18 +107,13 @@ h2 {
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 #newsletter button:hover {
   background-color: #444;
 }
 
-/* eBay Auction Section - Subtle Link Styling */
-#ebay {
-  margin-bottom: 40px;
-}
-
+/* eBay Auction Section */
 #ebay p {
   font-size: 1rem;
   color: #222;
@@ -137,4 +127,40 @@ h2 {
 
 #ebay a:hover {
   text-decoration: underline;
+}
+
+/* Collection page styling (collection.html) */
+#collectionPage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.collection-entry {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.collection-entry img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.collection-entry .details {
+  display: flex;
+  flex-direction: column;
+}
+
+.collection-entry h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.collection-entry p {
+  margin-bottom: 5px;
 }
