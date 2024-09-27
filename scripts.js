@@ -1,91 +1,99 @@
-// Collection data
+// Collections and Entries Data Structure
 const collections = [
   {
-    id: 1,
-    title: 'Ephemeral Echoes',
-    year: 2023,
+    title: "Collection 1",
     entries: [
       {
-        date: '2023-03-21',
-        title: 'Conceptual Seeds',
-        description: 'As the first buds of spring emerge, so too does my vision for "Ephemeral Echoes"...',
-        image: 'images/path_to_image1.jpg'
+        image: "image1.jpg",
+        text: "Entry 1 for Collection 1. This is the first paragraph of text providing a brief description.",
+        subText: "Second paragraph with more details, insight, and context about the collection entry."
       },
-      // ... other entries
+      {
+        image: "image2.jpg",
+        text: "Entry 2 for Collection 1. Another descriptive text goes here for this entry.",
+        subText: "Further elaboration on the themes and artistic vision behind this entry."
+      }
+      // Add up to 5 entries here for each collection
     ]
   },
   {
-    id: 2,
-    title: 'Celestial Observations',
-    year: 2022,
+    title: "Collection 2",
     entries: [
       {
-        date: '2022-10-05',
-        title: 'Stellar Seeds',
-        description: 'A deep dive into the cosmic influences...',
-        image: 'images/path_to_image2.jpg'
-      },
-      // ... other entries
+        image: "image3.jpg",
+        text: "Entry 1 for Collection 2.",
+        subText: "More detailed text description for this entry."
+      }
+      // Add more entries here
     ]
-  },
-  {
-    id: 3,
-    title: 'Historical Shadows',
-    year: 2021,
-    entries: [
-      {
-        date: '2021-12-11',
-        title: 'Fading Monuments',
-        description: 'Exploring the lost stories through artifacts...',
-        image: 'images/path_to_image3.jpg'
-      },
-      // ... other entries
-    ]
-  },
-  // More collections can be added
+  }
+  // Add more collections as needed
 ];
 
-// Populate the collection list on index.html
+// Dynamically Render Collections and Entries
 const collectionList = document.getElementById('collectionList');
-collections.forEach((collection) => {
+
+collections.forEach((collection, index) => {
   const collectionItem = document.createElement('li');
-  collectionItem.innerHTML = `
-    <a href="collection.html?id=${collection.id}">
-      ${collection.title} <span class="year">(${collection.year})</span>
-    </a>
-  `;
+  collectionItem.className = 'collection';
+
+  const collectionTitle = document.createElement('h2');
+  collectionTitle.textContent = collection.title;
+  collectionItem.appendChild(collectionTitle);
+
+  collection.entries.forEach(entry => {
+    const entryDiv = document.createElement('div');
+    entryDiv.className = 'collection-entry';
+
+    const entryImage = document.createElement('img');
+    entryImage.src = entry.image;
+    entryImage.alt = `${collection.title} entry image`;
+    entryDiv.appendChild(entryImage);
+
+    const entryText = document.createElement('p');
+    entryText.textContent = entry.text;
+    entryDiv.appendChild(entryText);
+
+    const entrySubText = document.createElement('p');
+    entrySubText.textContent = entry.subText;
+    entryDiv.appendChild(entrySubText);
+
+    collectionItem.appendChild(entryDiv);
+  });
+
   collectionList.appendChild(collectionItem);
 });
 
-// Handle newsletter form submission
-document.getElementById('newsletterForm').addEventListener('submit', function (event) {
-  event.preventDefault();
-  const email = document.getElementById('emailInput').value;
-  if (validateEmail(email)) {
-    alert('Thank you for subscribing!');
-    document.getElementById('emailInput').value = ''; // Clear input
+// File and Text Upload Handling (Backend Simulation)
+const uploadForm = document.getElementById('uploadForm');
+uploadForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const imageFiles = document.getElementById('imageUpload').files;
+  const textEntry = document.getElementById('textUpload').value;
+
+  if (imageFiles.length > 0 && textEntry) {
+    alert('Images and Text submitted successfully! This is just a simulation for backend integration.');
   } else {
-    alert('Please enter a valid email address.');
+    alert('Please upload images and enter some text.');
   }
 });
 
-// Email validation function
-function validateEmail(email) {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(String(email).toLowerCase());
+// Social Media Icons Toggle
+const socialIcons = {
+  twitter: document.getElementById('twitterIcon'),
+  instagram: document.getElementById('instagramIcon'),
+  github: document.getElementById('githubIcon'),
+  discord: document.getElementById('discordIcon'),
+  youtube: document.getElementById('youtubeIcon')
+};
+
+// Activate icons based on user preferences (simulated)
+function activateSocialIcons(iconsToActivate) {
+  iconsToActivate.forEach(icon => {
+    socialIcons[icon].style.display = 'inline';
+  });
 }
 
-// Function to load collection entries on collection.html
-function loadCollection(id) {
-  const collection = collections.find(c => c.id == id);
-  if (collection) {
-    const collectionPage = document.getElementById('collectionPage');
-    collection.entries.forEach(entry => {
-      const entryElement = document.createElement('div');
-      entryElement.classList.add('collection-entry');
-      entryElement.innerHTML = `
-        <img src="${entry.image}" alt="${entry.title}">
-        <div class="details">
-          <h3>${entry.title}</h3>
-          <p>Date: ${entry.date}</p>
-          <
+// Example: Activate Twitter and Instagram icons
+activateSocialIcons(['twitter', 'instagram']);
