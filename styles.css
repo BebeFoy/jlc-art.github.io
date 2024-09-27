@@ -1,0 +1,140 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+/* Minimalistic Main Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #f9f9f9; /* Blend the border with the background */
+  box-shadow: none;
+}
+
+/* Header Section - Clean, Subtle */
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 300;
+  text-align: center;
+  color: #111;
+  margin-bottom: 60px;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+}
+
+header h1 span {
+  font-size: 1.2rem;
+  font-weight: 200;
+  display: block;
+  margin-top: 10px;
+  color: #666;
+  opacity: 0.5;
+}
+
+/* Section Titles - Compact and Light */
+h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+
+/* Collection Section - Almost Invisible Yet Functional */
+#collections {
+  margin-bottom: 40px;
+}
+
+#collectionList {
+  list-style: none;
+  padding: 0;
+}
+
+#collectionList li {
+  padding: 12px 0;
+  transition: background-color 0.3s ease;
+  opacity: 0.6;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+#collectionList li:hover {
+  background-color: #f1f1f1;
+  opacity: 1;
+}
+
+#collectionList li a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+#collectionList li a:hover {
+  color: #444;
+}
+
+/* Newsletter Section - Minimalistic Inputs */
+#newsletter {
+  margin-bottom: 40px;
+}
+
+#newsletter input[type="email"] {
+  width: 60%;
+  padding: 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #333;
+  box-shadow: none;
+}
+
+#newsletter button {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#newsletter button:hover {
+  background-color: #444;
+}
+
+/* eBay Auction Section - Subtle Link Styling */
+#ebay {
+  margin-bottom: 40px;
+}
+
+#ebay p {
+  font-size: 1rem;
+  color: #222;
+}
+
+#ebay a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#ebay a:hover {
+  text-decoration: underline;
+}
