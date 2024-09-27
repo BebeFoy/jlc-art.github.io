@@ -3,17 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jonathan Lejon Creative - Home</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jonathan Lejon Creative</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="main">
-    <h1>Jonathan Lejon Creative</h1>
-    <ul id="collection-links">
-      <li><a href="collection1.html">Ephemeral Echoes</a></li>
-      <li><a href="collection2.html">Color Palette Exploration</a></li>
-      <li><a href="collection3.html">First Canvas</a></li>
+
+  <!-- Main Section -->
+  <main class="min-h-screen bg-light text-dark px-4 py-8 md:px-8 md:py-12 lg:px-16 lg:py-16">
+    <h1 class="text-2xl font-light mb-8 tracking-wide">Jonathan Lejon Creative</h1>
+
+    <!-- Collection Links -->
+    <ul class="space-y-2 text-xs" id="collections-list">
+      <!-- Collection Items will be dynamically added here using JavaScript -->
     </ul>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter-section">
+      <h2>Subscribe to Our Newsletter</h2>
+      <form>
+        <input type="email" id="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- Bulletin Board Section -->
+    <section id="bulletin-board" class="bulletin-section">
+      <h2>Bulletin Board</h2>
+      <ul id="bulletin-list">
+        <!-- Bulletin entries can be dynamically added via JavaScript -->
+      </ul>
+    </section>
+
+    <!-- eBay Auction Section -->
+    <section id="ebay-auction" class="auction-section">
+      <h2>Current eBay Auctions</h2>
+      <p>No auctions available at the moment. Stay tuned!</p>
+      <!-- Auction listings can be dynamically fetched and displayed -->
+    </section>
+
+    <!-- Gumball Arcade Leaderboard Section -->
+    <section id="leaderboard" class="leaderboard-section">
+      <h2>Gumball Arcade Leaderboard</h2>
+      <ol id="leaderboard-list">
+        <!-- Leaderboard entries can be dynamically updated via JavaScript -->
+      </ol>
+    </section>
+
+    <!-- Footnotes Section -->
+    <footer class="footer">
+      <h2>Footnotes</h2>
+      <ul id="footnotes-list">
+        <li><a href="#">Link to related content 1</a></li>
+        <li><a href="#">Link to related content 2</a></li>
+      </ul>
+    </footer>
   </main>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
