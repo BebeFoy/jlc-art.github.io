@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,36 +9,52 @@
 </head>
 
 <body>
+  <!-- Header Section -->
+  <header>
+    <h1>JLC – Art <span>(Jonathan Lejon Christian Art Archive)</span></h1>
+    <div id="menu-search">
+      <button id="menuButton">☰</button>
+      <div id="searchContainer">
+        <input type="text" id="searchInput" placeholder="Search the archive...">
+        <button id="searchButton">🔍</button>
+      </div>
+    </div>
+  </header>
+
   <!-- Main container -->
   <main class="container">
-    <!-- Header Section -->
-    <header>
-      <h1>JLC – Art <span>(Jonathan Lejon Christian Art Archive)</span></h1>
-    </header>
-
-    <!-- Collection Links Section -->
+    <!-- Collection List Section -->
     <section id="collections">
       <ul id="collectionList">
         <!-- JavaScript will dynamically populate collections -->
       </ul>
     </section>
-
-    <!-- Newsletter Section -->
-    <section id="newsletter">
-      <h2>Join the Newsletter</h2>
-      <form id="newsletterForm">
-        <input type="email" id="emailInput" placeholder="Enter your email">
-        <button type="submit">Subscribe</button>
-      </form>
-    </section>
-
-    <!-- eBay Auction Section -->
-    <section id="ebay">
-      <p>Available art auctions are listed on <a href="https://www.ebay.com/" target="_blank">eBay</a>.</p>
-    </section>
   </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div id="socialIcons">
+      <a href="https://twitter.com/" target="_blank" id="twitterIcon" style="display:none;">Twitter</a>
+      <a href="https://instagram.com/" target="_blank" id="instagramIcon" style="display:none;">Instagram</a>
+      <a href="https://github.com/" target="_blank" id="githubIcon" style="display:none;">GitHub</a>
+      <a href="https://discord.com/" target="_blank" id="discordIcon" style="display:none;">Discord</a>
+      <a href="https://youtube.com/" target="_blank" id="youtubeIcon" style="display:none;">YouTube</a>
+    </div>
+  </footer>
+
+  <!-- Backend File Upload Form -->
+  <section id="uploadSection">
+    <form id="uploadForm" enctype="multipart/form-data">
+      <label for="imageUpload">Upload Images for Collections:</label>
+      <input type="file" id="imageUpload" multiple>
+      
+      <label for="textUpload">Upload Text Entries for Journals:</label>
+      <textarea id="textUpload" rows="10" cols="50" placeholder="Write your journal entries here..."></textarea>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </section>
 
   <script src="scripts.js"></script>
 </body>
-
 </html>
