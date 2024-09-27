@@ -4,73 +4,50 @@ const collections = [
     id: 1,
     title: 'Ephemeral Echoes',
     year: 2023,
-    entries: [
-      {
-        date: '2023-03-21',
-        title: 'Conceptual Seeds',
-        description: 'As the first buds of spring emerge, so too does my vision for "Ephemeral Echoes"...',
-        image: 'path_to_image1.jpg'
-      },
-      // ... other entries
-    ]
+    description: 'A delicate exploration of fleeting moments and eternal concepts.',
+    image: 'images/ephemeral_echoes.jpg',
   },
   {
     id: 2,
     title: 'Celestial Observations',
     year: 2022,
-    entries: [
-      {
-        date: '2022-10-05',
-        title: 'Stellar Seeds',
-        description: 'A deep dive into the cosmic influences...',
-        image: 'path_to_image2.jpg'
-      },
-      // ... other entries
-    ]
+    description: 'A series dedicated to the mysteries of the stars and the human condition.',
+    image: 'images/celestial_observations.jpg',
   },
   {
     id: 3,
     title: 'Historical Shadows',
     year: 2021,
-    entries: [
-      {
-        date: '2021-12-11',
-        title: 'Fading Monuments',
-        description: 'Exploring the lost stories through artifacts...',
-        image: 'path_to_image3.jpg'
-      },
-      // ... other entries
-    ]
+    description: 'An introspective journey through historical artifacts and forgotten memories.',
+    image: 'images/historical_shadows.jpg',
   },
-  // ... more collections and entries
+  {
+    id: 4,
+    title: 'Urban Legends',
+    year: 2020,
+    description: 'The intersection of myth, folklore, and the urban environment.',
+    image: 'images/urban_legends.jpg',
+  },
+  // More collections here...
 ];
 
-// Render collections dynamically
-const collectionList = document.getElementById('collectionList');
-collections.forEach((collection) => {
-  const collectionItem = document.createElement('li');
-  collectionItem.innerHTML = `
-    <a href="collection.html?id=${collection.id}">
-      ${collection.title} <span class="year">(${collection.year})</span>
-    </a>
-  `;
-  collectionList.appendChild(collectionItem);
-});
+// Function to generate the collection HTML
+function generateCollections() {
+  const collectionList = document.getElementById('collectionList');
 
-// Handle newsletter form submission
-document.getElementById('newsletterForm').addEventListener('submit', function (event) {
-  event.preventDefault();
-  const email = document.getElementById('emailInput').value;
-  if (validateEmail(email)) {
-    alert('Thank you for subscribing!');
-    document.getElementById('emailInput').value = ''; // Clear input
-  } else {
-    alert('Please enter a valid email address.');
-  }
-});
-
-// Email validation function
-function validateEmail(email) {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(String(email).toLowerCase());
+  collections.forEach((collection) => {
+    const collectionItem = document.createElement('li');
+    collectionItem.innerHTML = `
+      <img src="${collection.image}" alt="${collection.title}">
+      <div class="info">
+        <h3>${collection.title}</h3>
+        <p>${collection.description}</p>
+        <small>Year: ${collection.year}</small>
+      </div>
+    `;
+    collectionList.appendChild(collectionItem);
+  });
 }
+
+// Initialize the collection rendering
+document.addEventListener('DOMContentLoaded', generateCollections);
