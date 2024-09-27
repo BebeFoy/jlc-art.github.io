@@ -1,62 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>JLC – Art (Jonathan Lejon Christian Art Archive)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jonathan Lejon Creative - Archive Journal for showcasing fine art collections and process.">
+  <title>Jonathan Lejon Creative</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+  <!-- Main container -->
+  <main class="container">
+    <!-- Header Section -->
     <header>
-        <h1>JLC – Art</h1>
-        <h2>(Jonathan Lejon Christian Art Archive)</h2>
+      <h1>Jonathan Lejon Creative</h1>
     </header>
 
-    <nav>
-        <button id="menuButton">Menu</button>
-        <input type="text" id="searchInput" placeholder="Search" />
-    </nav>
+    <!-- Collection Links Section -->
+    <section id="collections">
+      <h2>Collections</h2>
+      <ul id="collectionList">
+        <!-- JavaScript will populate this area with collections -->
+      </ul>
+    </section>
 
-    <main>
-        <ul id="collectionList" class="collection-list">
-            <li class="collection-item">
-                <h3 class="entry-title">Entry Title 1</h3>
-                <p class="entry-date">Consumption Date: <span class="highlight">2024-09-27</span></p>
-                <p class="entry-timestamp">Timestamp: <span class="highlight">12:00 PM</span></p>
-                <p class="entry-conceptual-timestamp">Conceptual Timestamp: <span class="highlight">Age of Aquarius</span></p>
-                <img src="image-placeholder.jpg" alt="Placeholder for Entry 1" class="entry-image">
-                <p class="entry-text">Description of the entry goes here. This is the first paragraph that provides an overview of the artwork.</p>
-                <p class="entry-subtext">Additional insights or context for the artwork are detailed in this paragraph.</p>
-            </li>
-            <li class="collection-item">
-                <h3 class="entry-title">Entry Title 2</h3>
-                <p class="entry-date">Consumption Date: <span class="highlight">2024-09-20</span></p>
-                <p class="entry-timestamp">Timestamp: <span class="highlight">10:30 AM</span></p>
-                <p class="entry-conceptual-timestamp">Conceptual Timestamp: <span class="highlight">The Dawn of Modernity</span></p>
-                <img src="image-placeholder.jpg" alt="Placeholder for Entry 2" class="entry-image">
-                <p class="entry-text">Description of the second entry goes here.</p>
-                <p class="entry-subtext">More detailed information about the significance of this work.</p>
-            </li>
-            <!-- Repeat for additional entries -->
-        </ul>
+    <!-- Newsletter Section -->
+    <section id="newsletter">
+      <h2>Join the Newsletter</h2>
+      <form id="newsletterForm">
+        <input type="email" id="emailInput" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
 
-        <form id="uploadForm">
-            <input type="file" id="imageUpload" accept="image/*" multiple>
-            <textarea id="textUpload" placeholder="Enter your journal entry here..."></textarea>
-            <button type="submit">Upload</button>
-        </form>
-    </main>
+    <!-- eBay Auction Section -->
+    <section id="ebay">
+      <h2>Available on eBay</h2>
+      <p>Check out my latest art auctions on <a href="https://www.ebay.com/" target="_blank">eBay</a></p>
+    </section>
+  </main>
 
-    <footer>
-        <div class="social-media">
-            <a href="#" id="twitterIcon">Twitter</a>
-            <a href="#" id="instagramIcon">Instagram</a>
-            <a href="#" id="githubIcon">GitHub</a>
-            <a href="#" id="discordIcon">Discord</a>
-            <a href="#" id="youtubeIcon">YouTube</a>
-        </div>
-    </footer>
-
-    <script src="scripts.js"></script>
+  <script src="scripts.js"></script>
 </body>
+
 </html>
