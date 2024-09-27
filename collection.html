@@ -27,25 +27,6 @@
     const urlParams = new URLSearchParams(window.location.search);
     const collectionId = urlParams.get('id');
 
-    // Collection data with entries
-    const collections = [
-      {
-        id: 1,
-        title: 'Ephemeral Echoes',
-        year: 2023,
-        entries: [
-          {
-            id: 1,
-            date: '2023-03-21',
-            season: 'SPR',
-            title: 'Conceptual Seeds',
-            content: 'As the first buds of spring emerge, so too does my vision for "Ephemeral Echoes"...'
-          },
-          // Add more entries as needed
-        ]
-      }
-    ];
-
     // Find collection by ID
     const collection = collections.find(col => col.id == collectionId);
     if (collection) {
@@ -58,15 +39,11 @@
           <div>
             <time>${entry.date}</time>
             <h2>${entry.title}</h2>
-            <p>${entry.content}</p>
+            <p>${entry.description}</p>
+            <img src="${entry.image}" alt="${entry.title}" style="width:100%; max-width:600px; margin-top:10px;">
           </div>
         `;
         entryList.appendChild(entryItem);
       });
     } else {
-      document.querySelector('h1').textContent = 'Collection Not Found';
-    }
-  </script>
-</body>
-
-</html>
+      document
