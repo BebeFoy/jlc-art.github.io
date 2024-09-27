@@ -6,56 +6,74 @@
 }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333;
-  line-height: 1.5;
   padding: 20px;
 }
 
-/* Minimalistic Main Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #f9f9f9;
-  box-shadow: none;
+/* Minimalist Header Section */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
 }
 
-/* Header Section */
 header h1 {
-  font-size: 2.2rem;
-  font-weight: 300;
-  text-align: center;
+  font-size: 2rem;
+  text-align: left;
   color: #111;
-  margin-bottom: 60px;
-  letter-spacing: 0.1em;
-  opacity: 0.8;
+  font-weight: 400;
 }
 
 header h1 span {
-  font-size: 1.2rem;
-  font-weight: 200;
-  display: block;
-  margin-top: 10px;
+  font-size: 1rem;
   color: #666;
-  opacity: 0.5;
+  font-weight: 300;
 }
 
-/* Section Titles */
-h2 {
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: #111;
-  margin-bottom: 10px;
-  letter-spacing: 0.05em;
-  opacity: 0.7;
+#menu-search {
+  display: flex;
+  align-items: center;
 }
 
-/* Collection Section */
+#menuButton {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+  opacity: 0.6;
+}
+
+#searchContainer {
+  position: relative;
+}
+
+#searchInput {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+  font-size: 0.9rem;
+  outline: none;
+  background-color: transparent;
+}
+
+#searchButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #333;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+/* Collection List Styling */
 #collections {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 #collectionList {
@@ -64,103 +82,69 @@ h2 {
 }
 
 #collectionList li {
-  padding: 12px 0;
-  transition: background-color 0.3s ease;
-  opacity: 0.6;
-  font-size: 0.95rem;
-  color: #222;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  margin-bottom: 10px;
 }
 
 #collectionList li:hover {
-  background-color: #f1f1f1;
-  opacity: 1;
-}
-
-#collectionList li a {
-  color: #111;
-  text-decoration: none;
-  font-weight: 500;
-  display: block;
-  transition: color 0.3s ease;
-}
-
-#collectionList li a:hover {
-  color: #444;
-}
-
-/* Newsletter Section */
-#newsletter input[type="email"] {
-  width: 60%;
-  padding: 10px;
-  font-size: 0.9rem;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  background-color: #fff;
-  color: #333;
-}
-
-#newsletter button {
-  padding: 10px 20px;
-  font-size: 0.9rem;
-  background-color: #111;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-#newsletter button:hover {
-  background-color: #444;
-}
-
-/* eBay Auction Section */
-#ebay p {
-  font-size: 1rem;
-  color: #222;
-}
-
-#ebay a {
-  color: #0066cc;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-#ebay a:hover {
-  text-decoration: underline;
-}
-
-/* Collection page styling (collection.html) */
-#collectionPage {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  background-color: #f0f0f0;
 }
 
 .collection-entry {
-  background-color: #f1f1f1;
-  padding: 20px;
-  border-radius: 5px;
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
+  margin-top: 15px;
 }
 
 .collection-entry img {
-  max-width: 200px;
-  height: auto;
-  border-radius: 5px;
-}
-
-.collection-entry .details {
-  display: flex;
-  flex-direction: column;
-}
-
-.collection-entry h3 {
-  font-size: 1.2rem;
+  max-width: 100%;
   margin-bottom: 10px;
 }
 
 .collection-entry p {
-  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  margin-top: 60px;
+  text-align: center;
+}
+
+#socialIcons a {
+  font-size: 0.9rem;
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+#socialIcons a:hover {
+  color: #666;
+}
+
+/* Backend Upload Form */
+#uploadSection {
+  margin-top: 60px;
+}
+
+#uploadForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#uploadForm input[type="file"],
+#uploadForm textarea {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+#uploadForm button {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
 }
