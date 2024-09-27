@@ -5,6 +5,7 @@ body {
     padding: 20px;
     background-color: #f9f9f9;
     color: #333;
+    font-size: 12px; /* Smaller base font size */
 }
 
 header {
@@ -12,7 +13,13 @@ header {
     margin-bottom: 20px;
 }
 
-h1, h2 {
+h1 {
+    font-size: 16px; /* Smaller title */
+    margin: 0;
+}
+
+h2 {
+    font-size: 12px; /* Smaller subtitle */
     margin: 0;
 }
 
@@ -40,14 +47,14 @@ nav {
 }
 
 .entry-title {
-    font-size: 20px; /* Adjust title size for visibility */
+    font-size: 14px; /* Smaller title size for entries */
     margin-bottom: 5px;
 }
 
 .highlight {
     color: #1c1c1c; /* Charcoal color */
     background-color: #e0e0e0; /* Off-white background for highlighting */
-    padding: 3px 5px;
+    padding: 2px 4px;
     border-radius: 3px; /* Rounded edges for highlights */
 }
 
@@ -59,8 +66,8 @@ nav {
 }
 
 .entry-text, .entry-subtext {
-    font-size: 14px; /* Smaller, cleaner font size */
-    line-height: 1.5;
+    font-size: 12px; /* Smaller font size for entry text */
+    line-height: 1.4; /* Slightly tighter line height */
 }
 
 footer {
@@ -72,6 +79,7 @@ footer {
     margin-right: 15px;
     color: #007BFF; /* Blue for linked text */
     text-decoration: none;
+    font-size: 12px; /* Smaller font size for social links */
 }
 
 .social-media a:hover {
