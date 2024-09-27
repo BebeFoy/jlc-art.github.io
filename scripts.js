@@ -1,4 +1,4 @@
-// Collection data - Now using an array of objects to populate the collection dynamically
+// Collection data for the main page
 const collections = [
   {
     id: 1,
@@ -20,10 +20,58 @@ const collections = [
     description: 'Unveiling forgotten history through ancient relics.',
     image: 'images/historical_shadows.jpg',
     year: 2021
+  },
+  {
+    id: 4,
+    title: 'Silent Echoes',
+    description: 'The art of stillness and reflection in modern landscapes.',
+    image: 'images/silent_echoes.jpg',
+    year: 2020
+  },
+  {
+    id: 5,
+    title: 'Dreamscapes',
+    description: 'Abstract interpretations of dream-like visions.',
+    image: 'images/dreamscapes.jpg',
+    year: 2019
   }
 ];
 
-// Render collections dynamically into the grid
+// Collection Journal for the archive page
+const archiveEntries = [
+  {
+    title: 'Ephemeral Echoes',
+    dateTime: '2023 - Spring',
+    description: 'This collection captures fleeting moments, turning them into conceptual art that mirrors the temporal nature of life.',
+    image: 'images/ephemeral_echoes.jpg'
+  },
+  {
+    title: 'Celestial Observations',
+    dateTime: '2022 - Summer',
+    description: 'A journey through stars and celestial forces, blending scientific observations with artistic expression.',
+    image: 'images/celestial_observations.jpg'
+  },
+  {
+    title: 'Historical Shadows',
+    dateTime: '2021 - Fall',
+    description: 'An exploration of ancient relics, untold stories, and forgotten shadows from history.',
+    image: 'images/historical_shadows.jpg'
+  },
+  {
+    title: 'Silent Echoes',
+    dateTime: '2020 - Winter',
+    description: 'A collection exploring the silent echoes of solitude and reflective landscapes.',
+    image: 'images/silent_echoes.jpg'
+  },
+  {
+    title: 'Dreamscapes',
+    dateTime: '2019 - Fall',
+    description: 'This collection explores abstract visions drawn from the deep recesses of the mind, portraying the beauty of dream-like states.',
+    image: 'images/dreamscapes.jpg'
+  }
+];
+
+// Render collections for the main page
 const collectionGrid = document.getElementById('collectionGrid');
 
 function createCollectionItem(collection) {
@@ -31,32 +79,4 @@ function createCollectionItem(collection) {
   collectionItem.classList.add('collection-item');
 
   collectionItem.innerHTML = `
-    <img src="${collection.image}" alt="${collection.title}" class="collection-image">
-    <h3 class="collection-title">${collection.title} (${collection.year})</h3>
-    <p class="collection-description">${collection.description}</p>
-  `;
-
-  return collectionItem;
-}
-
-collections.forEach(collection => {
-  collectionGrid.appendChild(createCollectionItem(collection));
-});
-
-// Newsletter form submission
-document.getElementById('newsletterForm').addEventListener('submit', function (event) {
-  event.preventDefault();
-  const email = document.getElementById('emailInput').value;
-  if (validateEmail(email)) {
-    alert('Thank you for subscribing!');
-    document.getElementById('emailInput').value = ''; // Clear the input field
-  } else {
-    alert('Please enter a valid email address.');
-  }
-});
-
-// Email validation function
-function validateEmail(email) {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(String(email).toLowerCase());
-}
+    <img src
