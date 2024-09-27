@@ -6,74 +6,44 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Georgia', serif;
   background-color: #f9f9f9;
   color: #333;
+  line-height: 1.6;
   padding: 20px;
 }
 
-/* Minimalist Header Section */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 60px;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+/* Header Styles */
 header h1 {
-  font-size: 2rem;
-  text-align: left;
-  color: #111;
-  font-weight: 400;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  color: #444;
+  margin-bottom: 20px;
 }
 
 header h1 span {
-  font-size: 1rem;
-  color: #666;
-  font-weight: 300;
-}
-
-#menu-search {
-  display: flex;
-  align-items: center;
-}
-
-#menuButton {
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-right: 20px;
-  opacity: 0.6;
-}
-
-#searchContainer {
-  position: relative;
-}
-
-#searchInput {
-  border: none;
-  border-bottom: 1px solid #ddd;
-  padding: 5px;
-  font-size: 0.9rem;
-  outline: none;
-  background-color: transparent;
-}
-
-#searchButton {
-  background: none;
-  border: none;
-  cursor: pointer;
   font-size: 1.2rem;
-  color: #333;
-  position: absolute;
-  right: 5px;
-  top: 5px;
+  font-weight: 400;
+  display: block;
+  margin-top: 10px;
+  color: #666;
 }
 
-/* Collection List Styling */
+/* Collection Section */
 #collections {
-  margin-bottom: 60px;
+  margin-top: 40px;
+}
+
+#collections h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
 #collectionList {
@@ -82,69 +52,66 @@ header h1 span {
 }
 
 #collectionList li {
-  padding: 20px;
   border-bottom: 1px solid #ddd;
-  background-color: #fff;
-  margin-bottom: 10px;
+  padding: 15px 0;
+  transition: background-color 0.3s ease;
 }
 
 #collectionList li:hover {
   background-color: #f0f0f0;
 }
 
-.collection-entry {
-  margin-top: 15px;
-}
-
-.collection-entry img {
-  max-width: 100%;
-  margin-bottom: 10px;
-}
-
-.collection-entry p {
-  font-size: 0.9rem;
-  color: #333;
-}
-
-/* Footer */
-footer {
-  margin-top: 60px;
-  text-align: center;
-}
-
-#socialIcons a {
-  font-size: 0.9rem;
-  margin: 0 10px;
+#collectionList li a {
   color: #333;
   text-decoration: none;
+  font-weight: bold;
+  display: block;
+  transition: color 0.3s ease;
 }
 
-#socialIcons a:hover {
-  color: #666;
+#collectionList li a:hover {
+  color: #555;
 }
 
-/* Backend Upload Form */
-#uploadSection {
-  margin-top: 60px;
+/* Newsletter Section */
+#newsletter {
+  margin-top: 40px;
 }
 
-#uploadForm {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+#newsletter input[type="email"] {
+  width: 70%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
 }
 
-#uploadForm input[type="file"],
-#uploadForm textarea {
-  border: 1px solid #ddd;
-  padding: 10px;
-}
-
-#uploadForm button {
-  padding: 10px;
+#newsletter button {
+  padding: 12px 20px;
+  font-size: 1rem;
   background-color: #333;
   color: #fff;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#newsletter button:hover {
+  background-color: #555;
+}
+
+/* eBay Auction Section */
+#ebay {
+  margin-top: 40px;
+}
+
+#ebay a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+#ebay a:hover {
+  text-decoration: underline;
 }
