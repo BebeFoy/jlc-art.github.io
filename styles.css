@@ -1,117 +1,86 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Base Styles */
 body {
-  font-family: 'Georgia', serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+header {
+    text-align: left;
+    margin-bottom: 20px;
 }
 
-/* Header Styles */
-header h1 {
-  font-size: 2.5rem;
-  font-weight: 300;
-  text-align: center;
-  color: #444;
-  margin-bottom: 20px;
+h1, h2 {
+    margin: 0;
 }
 
-header h1 span {
-  font-size: 1.2rem;
-  font-weight: 400;
-  display: block;
-  margin-top: 10px;
-  color: #666;
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-/* Collection Section */
-#collections {
-  margin-top: 40px;
+.collection-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between collection items */
 }
 
-#collections h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+.collection-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px; /* Softened edges */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
-#collectionList {
-  list-style: none;
-  padding: 0;
+.entry-title {
+    font-size: 20px; /* Adjust title size for visibility */
+    margin-bottom: 5px;
 }
 
-#collectionList li {
-  border-bottom: 1px solid #ddd;
-  padding: 15px 0;
-  transition: background-color 0.3s ease;
+.highlight {
+    color: #1c1c1c; /* Charcoal color */
+    background-color: #e0e0e0; /* Off-white background for highlighting */
+    padding: 3px 5px;
+    border-radius: 3px; /* Rounded edges for highlights */
 }
 
-#collectionList li:hover {
-  background-color: #f0f0f0;
+.entry-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Softened edges for images */
+    margin: 10px 0;
 }
 
-#collectionList li a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
-  transition: color 0.3s ease;
+.entry-text, .entry-subtext {
+    font-size: 14px; /* Smaller, cleaner font size */
+    line-height: 1.5;
 }
 
-#collectionList li a:hover {
-  color: #555;
+footer {
+    margin-top: 20px;
+    text-align: left;
 }
 
-/* Newsletter Section */
-#newsletter {
-  margin-top: 40px;
+.social-media a {
+    margin-right: 15px;
+    color: #007BFF; /* Blue for linked text */
+    text-decoration: none;
 }
 
-#newsletter input[type="email"] {
-  width: 70%;
-  padding: 12px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-right: 10px;
+.social-media a:hover {
+    text-decoration: underline; /* Underline effect on hover */
 }
 
-#newsletter button {
-  padding: 12px 20px;
-  font-size: 1rem;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#newsletter button:hover {
-  background-color: #555;
-}
-
-/* eBay Auction Section */
-#ebay {
-  margin-top: 40px;
-}
-
-#ebay a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-#ebay a:hover {
-  text-decoration: underline;
+/* Responsive Design */
+@media (max-width: 600px) {
+    .collection-list {
+        padding: 0 10px; /* Padding for smaller screens */
+    }
 }
