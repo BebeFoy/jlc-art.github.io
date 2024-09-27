@@ -1,3 +1,4 @@
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -5,62 +6,113 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Georgia', serif;
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
-}
-
-h1, h2 {
-  margin-bottom: 16px;
-}
-
-main {
   padding: 20px;
-  min-height: 100vh;
 }
 
-ul {
-  list-style-type: none;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-a {
-  text-decoration: none;
-  color: #333;
+/* Header Styles */
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  color: #444;
+  margin-bottom: 20px;
 }
 
-a:hover {
+header h1 span {
+  font-size: 1.2rem;
+  font-weight: 400;
+  display: block;
+  margin-top: 10px;
   color: #666;
 }
 
-.newsletter-section,
-.bulletin-section,
-.auction-section,
-.leaderboard-section {
+/* Collection Section */
+#collections {
   margin-top: 40px;
 }
 
-.newsletter-section input,
-.newsletter-section button {
-  padding: 10px;
-  margin-right: 5px;
-}
-
-.footer {
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid #ccc;
-}
-
-footer ul li {
+#collections h2 {
+  font-size: 1.8rem;
   margin-bottom: 10px;
 }
 
-footer ul li a:hover {
+#collectionList {
+  list-style: none;
+  padding: 0;
+}
+
+#collectionList li {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  transition: background-color 0.3s ease;
+}
+
+#collectionList li:hover {
+  background-color: #f0f0f0;
+}
+
+#collectionList li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+#collectionList li a:hover {
+  color: #555;
+}
+
+/* Newsletter Section */
+#newsletter {
+  margin-top: 40px;
+}
+
+#newsletter input[type="email"] {
+  width: 70%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#newsletter button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#newsletter button:hover {
+  background-color: #555;
+}
+
+/* eBay Auction Section */
+#ebay {
+  margin-top: 40px;
+}
+
+#ebay a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+#ebay a:hover {
   text-decoration: underline;
 }
 
-.space-y-2 li {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
-}
