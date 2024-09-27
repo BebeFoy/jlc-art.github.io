@@ -1,94 +1,92 @@
-/* Base Styles */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f9f9f9;
-    color: #333;
-    font-size: 12px; /* Smaller base font size */
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
 }
 
-header {
-    text-align: left;
-    margin-bottom: 20px;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-h1 {
-    font-size: 16px; /* Smaller title */
-    margin: 0;
+/* Header Styles */
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+  text-align: center;
 }
 
-h2 {
-    font-size: 12px; /* Smaller subtitle */
-    margin: 0;
+/* Collections Section */
+#collections h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+#collectionList {
+  list-style: none;
+  padding: 0;
 }
 
-.collection-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between collection items */
+#collectionList li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
 }
 
-.collection-item {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px; /* Softened edges */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+#collectionList li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-.entry-title {
-    font-size: 14px; /* Smaller title size for entries */
-    margin-bottom: 5px;
+#collectionList li a:hover {
+  color: #666;
 }
 
-.highlight {
-    color: #1c1c1c; /* Charcoal color */
-    background-color: #e0e0e0; /* Off-white background for highlighting */
-    padding: 2px 4px;
-    border-radius: 3px; /* Rounded edges for highlights */
+/* Newsletter Section */
+#newsletter {
+  margin-top: 40px;
 }
 
-.entry-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* Softened edges for images */
-    margin: 10px 0;
+#newsletter input[type="email"] {
+  width: 70%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-right: 10px;
 }
 
-.entry-text, .entry-subtext {
-    font-size: 12px; /* Smaller font size for entry text */
-    line-height: 1.4; /* Slightly tighter line height */
+#newsletter button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
-footer {
-    margin-top: 20px;
-    text-align: left;
+#newsletter button:hover {
+  background-color: #555;
 }
 
-.social-media a {
-    margin-right: 15px;
-    color: #007BFF; /* Blue for linked text */
-    text-decoration: none;
-    font-size: 12px; /* Smaller font size for social links */
+/* eBay Auction Section */
+#ebay {
+  margin-top: 40px;
 }
 
-.social-media a:hover {
-    text-decoration: underline; /* Underline effect on hover */
+#ebay a {
+  color: #0066cc;
+  text-decoration: none;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    .collection-list {
-        padding: 0 10px; /* Padding for smaller screens */
-    }
+#ebay a:hover {
+  text-decoration: underline;
 }
