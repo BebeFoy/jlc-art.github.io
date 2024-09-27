@@ -1,69 +1,55 @@
-// Collection data
+// Collection data - Now using an array of objects to populate the collection dynamically
 const collections = [
   {
     id: 1,
     title: 'Ephemeral Echoes',
-    year: 2023,
-    entries: [
-      {
-        date: '2023-03-21',
-        title: 'Conceptual Seeds',
-        description: 'As the first buds of spring emerge, so too does my vision for "Ephemeral Echoes"...',
-        image: 'path_to_image1.jpg'
-      },
-      // ... other entries
-    ]
+    description: 'Exploring fleeting moments through conceptual imagery.',
+    image: 'images/ephemeral_echoes.jpg',
+    year: 2023
   },
   {
     id: 2,
     title: 'Celestial Observations',
-    year: 2022,
-    entries: [
-      {
-        date: '2022-10-05',
-        title: 'Stellar Seeds',
-        description: 'A deep dive into the cosmic influences...',
-        image: 'path_to_image2.jpg'
-      },
-      // ... other entries
-    ]
+    description: 'A celestial journey through stars and cosmic forces.',
+    image: 'images/celestial_observations.jpg',
+    year: 2022
   },
   {
     id: 3,
     title: 'Historical Shadows',
-    year: 2021,
-    entries: [
-      {
-        date: '2021-12-11',
-        title: 'Fading Monuments',
-        description: 'Exploring the lost stories through artifacts...',
-        image: 'path_to_image3.jpg'
-      },
-      // ... other entries
-    ]
-  },
-  // ... more collections and entries
+    description: 'Unveiling forgotten history through ancient relics.',
+    image: 'images/historical_shadows.jpg',
+    year: 2021
+  }
 ];
 
-// Render collections dynamically
-const collectionList = document.getElementById('collectionList');
-collections.forEach((collection) => {
-  const collectionItem = document.createElement('li');
+// Render collections dynamically into the grid
+const collectionGrid = document.getElementById('collectionGrid');
+
+function createCollectionItem(collection) {
+  const collectionItem = document.createElement('div');
+  collectionItem.classList.add('collection-item');
+
   collectionItem.innerHTML = `
-    <a href="collection.html?id=${collection.id}">
-      ${collection.title} <span class="year">(${collection.year})</span>
-    </a>
+    <img src="${collection.image}" alt="${collection.title}" class="collection-image">
+    <h3 class="collection-title">${collection.title} (${collection.year})</h3>
+    <p class="collection-description">${collection.description}</p>
   `;
-  collectionList.appendChild(collectionItem);
+
+  return collectionItem;
+}
+
+collections.forEach(collection => {
+  collectionGrid.appendChild(createCollectionItem(collection));
 });
 
-// Handle newsletter form submission
+// Newsletter form submission
 document.getElementById('newsletterForm').addEventListener('submit', function (event) {
   event.preventDefault();
   const email = document.getElementById('emailInput').value;
   if (validateEmail(email)) {
     alert('Thank you for subscribing!');
-    document.getElementById('emailInput').value = ''; // Clear input
+    document.getElementById('emailInput').value = ''; // Clear the input field
   } else {
     alert('Please enter a valid email address.');
   }
