@@ -1,109 +1,66 @@
-/* General body styling */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* Main container styling */
-.main {
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  margin-bottom: 16px;
+}
+
+main {
+  padding: 20px;
   min-height: 100vh;
-  padding: 2rem 1rem;
 }
 
-/* Headings */
-h1 {
-  font-size: 2rem;
-  font-weight: 300;
-  margin-bottom: 2rem;
-  letter-spacing: 0.05em;
+ul {
+  list-style-type: none;
 }
 
-h2 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-/* Paragraphs */
-p {
-  font-size: 0.875rem;
-  line-height: 1.5;
-}
-
-/* Links styling */
 a {
   text-decoration: none;
-  color: #888;
-  transition: color 0.2s ease;
+  color: #333;
 }
 
 a:hover {
   color: #666;
 }
 
-.back-link {
-  font-size: 0.875rem;
-  display: inline-block;
-  margin-bottom: 2rem;
+.newsletter-section,
+.bulletin-section,
+.auction-section,
+.leaderboard-section {
+  margin-top: 40px;
 }
 
-/* Archive entries */
-.archive-list {
-  list-style-type: none;
-  padding-left: 0;
+.newsletter-section input,
+.newsletter-section button {
+  padding: 10px;
+  margin-right: 5px;
 }
 
-.archive-list li {
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 0.5rem;
+.footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
 }
 
-.archive-list li:last-child {
-  border-bottom: none;
+footer ul li {
+  margin-bottom: 10px;
 }
 
-/* Collection list */
-.collection-list {
-  list-style-type: none;
-  padding-left: 0;
+footer ul li a:hover {
+  text-decoration: underline;
 }
 
-.collection-item {
-  margin-bottom: 2rem;
-}
-
-.collection-item .meta {
-  font-size: 0.75rem;
-  color: #888;
-  margin-bottom: 0.5rem;
-}
-
-.collection-item img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
-}
-
-/* Responsive styling */
-@media (min-width: 768px) {
-  .main {
-    padding: 3rem 2rem;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .main {
-    padding: 4rem 3rem;
-  }
+.space-y-2 li {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
 }
