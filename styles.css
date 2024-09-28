@@ -11,33 +11,38 @@ body {
   color: #333;
   padding: 20px;
   font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 /* Container */
 .container {
   max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Header */
 header {
   margin-bottom: 40px;
+  text-align: left;
 }
 
 .title {
   font-size: 1.5rem;
   font-weight: bold;
   color: #111;
-  text-align: left;
 }
 
 .subtitle {
   font-size: 0.8rem;
   color: #555;
-  text-align: left;
   opacity: 0.7;
 }
 
@@ -47,12 +52,25 @@ header {
   color: #555;
   text-decoration: none;
   display: block;
-  margin-bottom: 20px;
 }
 
 .back-link:hover {
   color: #111;
   text-decoration: underline;
+}
+
+/* Top Back Link */
+.top-back-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* Bottom Back Link */
+.bottom-back-link {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
 
 /* Collection Details */
@@ -84,36 +102,20 @@ header {
   display: block;
 }
 
-/* Bottom Back Link */
-.bottom-left {
-  position: absolute;
-  left: 20px;
-  bottom: 40px;
-  font-size: 0.9rem;
-  color: #555;
-  text-decoration: none;
-}
-
-.bottom-left:hover {
-  color: #111;
-  text-decoration: underline;
-}
-
 /* Search Bar */
-#search-bar {
+.search-bar {
   margin-top: 80px;
   display: flex;
   justify-content: center;
 }
 
-#search-bar input {
+.search-bar input {
   padding: 10px;
   font-size: 0.9rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 300px;
   display: block;
-  margin: 0 auto;
 }
 
 /* Styling for the entire page */
@@ -124,4 +126,5 @@ header {
   padding: 20px;
   border-radius: 8px;
   position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
