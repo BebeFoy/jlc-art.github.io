@@ -3,42 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="JLC – Art (Jonathan Lejon Christian Art Archive)">
-  <title>JLC – Art Archive</title>
+  <title>Art Collections</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="container">
-    <!-- Header -->
+
+  <div class="container">
     <header>
-      <h1 class="title">JLC – Art</h1>
-      <h2 class="subtitle">(Jonathan Lejon Christian Art Archive)</h2>
+      <div class="title">Art Collections</div>
+      <div class="subtitle">Explore our curated selections</div>
     </header>
 
-    <!-- Collection Section -->
-    <section id="collections">
-      <h2>Art Collections</h2>
-      <div id="collectionGrid" class="collection-list">
-        <!-- Collection items will be injected here by JavaScript -->
-      </div>
-    </section>
+    <div class="collection-list">
+      <a href="collection-details.html?collection=1">Collection 1</a>
+      <a href="collection-details.html?collection=2">Collection 2</a>
+      <a href="collection-details.html?collection=3">Collection 3</a>
+      <a href="collection-details.html?collection=4">Collection 4</a>
+      <a href="collection-details.html?collection=5">Collection 5</a>
+    </div>
 
-    <!-- Newsletter Section -->
-    <section id="newsletter">
-      <h2>Join the Newsletter</h2>
+    <div id="newsletter">
+      <h2>Join our Newsletter</h2>
       <form id="newsletterForm">
-        <input type="email" id="emailInput" placeholder="Enter your email">
+        <input type="email" placeholder="Enter your email" required>
         <button type="submit">Subscribe</button>
       </form>
-    </section>
+    </div>
+  </div>
 
-    <!-- eBay Section -->
-    <section id="ebay">
-      <h2>Available on eBay</h2>
-      <p>Explore my latest art auctions on <a href="https://www.ebay.com/" target="_blank">eBay</a></p>
-    </section>
-  </main>
-
-  <script src="scripts.js"></script>
 </body>
 </html>
