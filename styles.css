@@ -60,9 +60,33 @@ header {
   border-color: #666;
 }
 
+/* Collection Details */
+#collection-details {
+  margin-top: 40px;
+}
+
+.collection-item {
+  margin-bottom: 40px;
+}
+
+.collection-item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.collection-item p {
+  margin: 10px 0;
+}
+
+.collection-item img {
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
 /* Newsletter Section */
 #newsletter {
-  margin-top: 120px; /* Updated from 40px to 120px for 80px space */
+  margin-top: 120px;
 }
 
 #newsletter h2 {
@@ -96,24 +120,4 @@ header {
 
 #newsletterForm button:hover {
   background-color: #333;
-}
-
-/* eBay Section */
-#ebay {
-  margin-top: 40px;
-}
-
-#ebay h2 {
-  margin-bottom: 20px;
-}
-
-#ebay a {
-  color: #111;
-  text-decoration: none;
-  border-bottom: 1px dashed #111;
-}
-
-#ebay a:hover {
-  color: #666;
-  border-color: #666;
 }
