@@ -7,66 +7,118 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0; /* Solid background color */
+  background-color: #f5f5f5;
   color: #333;
   padding: 20px;
   font-size: 14px;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Align items to the top */
+  align-items: center;
   min-height: 100vh;
-  position: relative;
-}
-
-/* Header with Name */
-.header-name {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  font-size: 1rem;
-  color: #aaa; /* Grey tone for discretion */
 }
 
 /* Container */
 .container {
   max-width: 900px;
   width: 100%;
-  background-color: transparent; /* Make container transparent */
+  background-color: #fff;
   padding: 20px;
-  margin-top: 120px; /* Space from top */
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+/* Header */
+header {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  color: #555;
+  opacity: 0.7;
 }
 
 /* Collections Section */
 .collections-section {
   display: flex;
-  flex-direction: column; /* Stack entries vertically */
+  justify-content: space-between;
 }
 
-.collection-entry {
-  background-color: #fff; /* White background for entries */
-  padding: 15px;
-  margin-bottom: 20px; /* Space between each entry */
-  border-radius: 8px; /* Rounded corners for entries */
-  opacity: 0.95; /* Slightly transparent for soft blending */
+.collections-column {
+  width: 48%;
 }
 
-/* Entry Title */
-.collection-title {
-  font-size: 1.2rem;
+.collections-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.collections-column ul li {
+  margin-bottom: 15px;
+}
+
+.collections-column ul li a {
+  font-size: 1rem;
   font-weight: bold;
   color: #111;
+  text-decoration: none;
 }
 
-/* Entry Date and Details */
-.collection-details {
-  font-size: 0.9rem;
+.collections-column ul li a:hover {
+  color: #555;
+}
+
+.collections-column ul li .description {
+  font-size: 0.85rem;
   color: #777;
   margin-top: 5px;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .collection-entry {
-    padding: 10px;
-  }
+/* Newsletter Section */
+.newsletter-section {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.newsletter-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.newsletter-section form {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-section input {
+  padding: 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.newsletter-section button {
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter-section button:hover {
+  background-color: #555;
 }
