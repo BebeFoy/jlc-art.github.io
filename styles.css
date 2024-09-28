@@ -1,124 +1,68 @@
 /* General Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  padding: 20px;
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Container */
-.container {
-  max-width: 900px;
-  width: 100%;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  position: relative;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
-}
-
-/* Header */
+/* Header Styles */
 header {
-  margin-bottom: 40px;
-  text-align: left;
+    position: relative;
+    padding: 20px;
 }
 
-.title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #111;
+/* Branding Styles */
+.branding {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    text-align: right; /* Aligns the text to the right */
 }
 
-.subtitle {
-  font-size: 0.8rem;
-  color: #555;
-  opacity: 0.7;
+.branding h1 {
+    font-size: 1.5rem; /* Title Size */
+    color: #222;
 }
 
-/* Collections Section */
-.collections-section {
-  display: flex;
-  justify-content: space-between;
+.branding h2 {
+    font-size: 0.9rem; /* Subtitle Size */
+    color: #555; /* Slightly lighter color for contrast */
 }
 
-.collections-column {
-  width: 48%;
+/* Main Section Styles */
+main {
+    padding: 40px 20px; /* More padding for better spacing */
 }
 
-.collections-column ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* Collection Details Styles */
+.collection-details {
+    display: flex;
+    flex-direction: column; /* Stacks the entries vertically */
 }
 
-.collections-column ul li {
-  margin-bottom: 15px;
+.collection-entry {
+    background: #fff; /* White background for each entry */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Internal padding for content */
+    margin-bottom: 20px; /* Space between entries */
 }
 
-.collections-column ul li a {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #111;
-  text-decoration: none;
+.collection-entry h3 {
+    font-size: 1.2rem; /* Title size for artwork */
+    margin-bottom: 10px; /* Space below title */
+    color: #222; /* Dark color for titles */
 }
 
-.collections-column ul li a:hover {
-  color: #555;
-}
-
-.collections-column ul li .description {
-  font-size: 0.85rem;
-  color: #777;
-  margin-top: 5px;
-}
-
-/* Newsletter Section */
-.newsletter-section {
-  margin-top: 80px;
-  text-align: center;
-}
-
-.newsletter-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.newsletter-section form {
-  display: flex;
-  justify-content: center;
-}
-
-.newsletter-section input {
-  padding: 10px;
-  font-size: 0.9rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 300px;
-  margin-right: 10px;
-}
-
-.newsletter-section button {
-  padding: 10px 15px;
-  font-size: 0.9rem;
-  color: #fff;
-  background-color: #333;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.newsletter-section button:hover {
-  background-color: #555;
+.collection-entry p {
+    font-size: 0.95rem; /* Description size */
+    color: #666; /* Lighter color for description text */
 }
