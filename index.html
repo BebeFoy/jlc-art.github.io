@@ -3,31 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Art Collections</title>
+  <title>Collection Details</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <div class="container">
     <header>
-      <div class="title">Art Collections</div>
-      <div class="subtitle">Explore our curated selections</div>
+      <div class="title">Collection Details</div>
+      <div class="subtitle">In-depth look at each collection</div>
     </header>
 
-    <div class="collection-list">
-      <a href="collection-details.html?collection=1">Collection 1</a>
-      <a href="collection-details.html?collection=2">Collection 2</a>
-      <a href="collection-details.html?collection=3">Collection 3</a>
-      <a href="collection-details.html?collection=4">Collection 4</a>
-      <a href="collection-details.html?collection=5">Collection 5</a>
+    <!-- Back link at the top of the page -->
+    <a href="index.html" class="back-link">← Back to Collections</a>
+
+    <div id="collection-details">
+      <div class="collection-item">
+        <h3>The Essence of Time</h3>
+        <p><strong>Date of Conception:</strong> March 20, 2023</p>
+        <p><strong>Time of Conception:</strong> 3:00 PM</p>
+        <p><strong>Season:</strong> Spring</p>
+        <img src="image1.jpg" alt="Art piece image" class="collection-img">
+      </div>
+
+      <div class="collection-item">
+        <h3>The Silent Cosmos</h3>
+        <p><strong>Date of Conception:</strong> June 12, 2022</p>
+        <p><strong>Time of Conception:</strong> 10:30 AM</p>
+        <p><strong>Season:</strong> Summer</p>
+        <img src="image2.jpg" alt="Art piece image" class="collection-img">
+      </div>
+
+      <div class="collection-item">
+        <h3>Shadows of Winter</h3>
+        <p><strong>Date of Conception:</strong> December 15, 2021</p>
+        <p><strong>Time of Conception:</strong> 6:45 PM</p>
+        <p><strong>Season:</strong> Winter</p>
+        <img src="image3.jpg" alt="Art piece image" class="collection-img">
+      </div>
+
+      <!-- Additional collection items can be added similarly -->
     </div>
 
-    <div id="newsletter">
-      <h2>Join our Newsletter</h2>
-      <form id="newsletterForm">
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
+    <!-- Back link at the bottom of the page -->
+    <a href="index.html" class="back-link bottom-left">← Back to Collections</a>
+
+    <!-- Search bar at the bottom of the container -->
+    <div id="search-bar">
+      <input type="text" placeholder="Search collections...">
     </div>
   </div>
 
