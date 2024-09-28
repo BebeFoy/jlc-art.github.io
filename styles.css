@@ -1,47 +1,123 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Collection Details</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <div class="container">
-    <header>
-      <div class="title">Collection Details</div>
-      <div class="subtitle">In-depth look at each collection</div>
-    </header>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 20px;
+  font-size: 14px;
+}
 
-    <div id="collection-details">
-      <div class="collection-item">
-        <h3>Title: The Essence of Time</h3>
-        <p><strong>Date of Conception:</strong> March 20, 2023</p>
-        <p><strong>Time of Conception:</strong> 3:00 PM</p>
-        <p><strong>Season:</strong> Spring</p>
-        <img src="image1.jpg" alt="Art piece image" style="width: 100%;">
-      </div>
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-      <div class="collection-item">
-        <h3>Title: The Silent Cosmos</h3>
-        <p><strong>Date of Conception:</strong> June 12, 2022</p>
-        <p><strong>Time of Conception:</strong> 10:30 AM</p>
-        <p><strong>Season:</strong> Summer</p>
-        <img src="image2.jpg" alt="Art piece image" style="width: 100%;">
-      </div>
+/* Header */
+header {
+  margin-bottom: 60px;
+}
 
-      <div class="collection-item">
-        <h3>Title: Shadows of Winter</h3>
-        <p><strong>Date of Conception:</strong> December 15, 2021</p>
-        <p><strong>Time of Conception:</strong> 6:45 PM</p>
-        <p><strong>Season:</strong> Winter</p>
-        <img src="image3.jpg" alt="Art piece image" style="width: 100%;">
-      </div>
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111;
+  text-align: left;
+}
 
-      <!-- Add more collection entries here -->
-    </div>
-  </div>
+.subtitle {
+  font-size: 0.8rem;
+  color: #555;
+  text-align: left;
+  opacity: 0.7;
+}
 
-</body>
-</html>
+/* Collection List */
+.collection-list {
+  margin-top: 20px;
+}
+
+.collection-list a {
+  display: block;
+  font-size: 1rem;
+  color: #111;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.collection-list a:hover {
+  background-color: #f5f5f5;
+  border-color: #666;
+}
+
+/* Collection Details */
+#collection-details {
+  margin-top: 40px;
+}
+
+.collection-item {
+  margin-bottom: 40px;
+}
+
+.collection-item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.collection-item p {
+  margin: 10px 0;
+}
+
+.collection-item img {
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Newsletter Section */
+#newsletter {
+  margin-top: 120px;
+}
+
+#newsletter h2 {
+  margin-bottom: 20px;
+}
+
+#newsletterForm {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#newsletterForm input {
+  padding: 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+#newsletterForm button {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#newsletterForm button:hover {
+  background-color: #333;
+}
