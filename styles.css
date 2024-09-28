@@ -1,130 +1,47 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collection Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  padding: 20px;
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
+  <div class="container">
+    <header>
+      <div class="title">Collection Details</div>
+      <div class="subtitle">In-depth look at each collection</div>
+    </header>
 
-/* Container */
-.container {
-  max-width: 800px;
-  width: 100%;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  position: relative;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
+    <div id="collection-details">
+      <div class="collection-item">
+        <h3>Title: The Essence of Time</h3>
+        <p><strong>Date of Conception:</strong> March 20, 2023</p>
+        <p><strong>Time of Conception:</strong> 3:00 PM</p>
+        <p><strong>Season:</strong> Spring</p>
+        <img src="image1.jpg" alt="Art piece image" style="width: 100%;">
+      </div>
 
-/* Header */
-header {
-  margin-bottom: 40px;
-  text-align: left;
-}
+      <div class="collection-item">
+        <h3>Title: The Silent Cosmos</h3>
+        <p><strong>Date of Conception:</strong> June 12, 2022</p>
+        <p><strong>Time of Conception:</strong> 10:30 AM</p>
+        <p><strong>Season:</strong> Summer</p>
+        <img src="image2.jpg" alt="Art piece image" style="width: 100%;">
+      </div>
 
-.title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #111;
-}
+      <div class="collection-item">
+        <h3>Title: Shadows of Winter</h3>
+        <p><strong>Date of Conception:</strong> December 15, 2021</p>
+        <p><strong>Time of Conception:</strong> 6:45 PM</p>
+        <p><strong>Season:</strong> Winter</p>
+        <img src="image3.jpg" alt="Art piece image" style="width: 100%;">
+      </div>
 
-.subtitle {
-  font-size: 0.8rem;
-  color: #555;
-  opacity: 0.7;
-}
+      <!-- Add more collection entries here -->
+    </div>
+  </div>
 
-/* Back Links */
-.back-link {
-  font-size: 0.9rem;
-  color: #555;
-  text-decoration: none;
-  display: block;
-}
-
-.back-link:hover {
-  color: #111;
-  text-decoration: underline;
-}
-
-/* Top Back Link */
-.top-back-link {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-/* Bottom Back Link */
-.bottom-back-link {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-}
-
-/* Collection Details */
-#collection-details {
-  margin-top: 20px;
-}
-
-.collection-item {
-  margin-bottom: 40px;
-}
-
-.collection-item h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #111;
-  text-align: left;
-}
-
-.collection-item p {
-  margin: 10px 0;
-  text-align: left;
-}
-
-.collection-item img {
-  margin-top: 10px;
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  display: block;
-}
-
-/* Search Bar */
-.search-bar {
-  margin-top: 80px;
-  display: flex;
-  justify-content: center;
-}
-
-.search-bar input {
-  padding: 10px;
-  font-size: 0.9rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 300px;
-  display: block;
-}
-
-/* Styling for the entire page */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  position: relative;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
+</body>
+</html>
