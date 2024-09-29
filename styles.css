@@ -10,7 +10,7 @@ body {
   background-color: #f5f5f5;
   color: #333;
   padding: 20px;
-  font-size: 14px;
+  font-size: 14px; /* Smaller font for the minimalistic look */
 }
 
 /* Container */
@@ -25,95 +25,103 @@ header {
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Smaller title */
   font-weight: bold;
   color: #111;
   text-align: left;
 }
 
 .subtitle {
-  font-size: 0.8rem;
+  font-size: 0.8rem; /* Smaller subtitle */
   color: #555;
   text-align: left;
   opacity: 0.7;
 }
 
-/* Collection List */
-.collection-list {
+/* Collection Grid */
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
   margin-top: 20px;
 }
 
-.collection-list a {
-  display: block;
-  font-size: 1rem;
-  color: #111;
-  margin-bottom: 15px;
-  padding: 10px;
-  border-radius: 5px;
-  text-decoration: none;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.collection-list a:hover {
-  background-color: #f5f5f5;
-  border-color: #666;
-}
-
-/* Newsletter Section */
-#newsletter {
-  margin-top: 40px;
-}
-
-#newsletter h2 {
-  margin-bottom: 20px;
-}
-
-#newsletterForm {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-#newsletterForm input {
-  padding: 10px;
-  font-size: 0.9rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  flex-grow: 1;
-}
-
-#newsletterForm button {
-  padding: 10px 20px;
-  font-size: 0.9rem;
+.collection-item {
   background-color: #111;
-  color: white;
-  border: none;
+  color: #fff;
+  padding: 15px;
   border-radius: 5px;
-  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-#newsletterForm button:hover {
+.collection-item:hover {
   background-color: #333;
 }
 
-/* eBay Section */
-#ebay {
-  margin-top: 40px;
+.collection-image {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
-#ebay h2 {
-  margin-bottom: 20px;
+.collection-title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-#ebay a {
+.collection-description {
+  font-size: 0.85rem;
+  color: #ddd;
+}
+
+/* Collection Archive Journal */
+#collectionArchive {
+  margin-top: 20px;
+}
+
+.archive-entry {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.archive-entry img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.archive-entry .title {
+  font-size: 1rem;
+  font-weight: bold;
   color: #111;
-  text-decoration: none;
-  border-bottom: 1px dashed #111;
 }
 
-#ebay a:hover {
+.archive-entry .description {
+  font-size: 0.9rem;
   color: #666;
-  border-color: #666;
+}
+
+.archive-entry .date-time {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 5px;
+}
+
+.archive-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.archive-link:hover {
+  background-color: #333;
 }
