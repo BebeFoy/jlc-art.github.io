@@ -18,7 +18,7 @@
             <h3>Collection 1: The Lost Chronicles</h3>
             <h4>Exploring untold stories and forgotten histories</h4>
 
-            <div class="collection-content">
+            <div class="content">
                 <div class="text-section">
                     <p>
                         This collection delves into the idea that history is written by the victors and that many profound stories
@@ -32,9 +32,19 @@
                     <img src="images/collection1-image2.jpg" alt="Collection 1 Artwork 2">
                 </div>
             </div>
+
+            <div class="newsletter">
+                <form action="#">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="ebay-link">
+                <p>Check out my <a href="https://www.ebay.com" target="_blank">eBay Auctions</a> for more exclusive art pieces.</p>
+            </div>
         </section>
     </div>
 
 </body>
 </html>
-
