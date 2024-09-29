@@ -13,6 +13,10 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 header {
@@ -20,6 +24,10 @@ header {
     background-color: #fff;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header h1 {
@@ -33,46 +41,107 @@ header h2 {
 }
 
 .container {
+    width: 80%;
+    max-width: 1200px;
     padding: 20px;
 }
 
-.collections {
-    margin-top: 40px;
+.collection {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 100px;
 }
 
-.collections h3 {
-    font-size: 1.8rem;
-    color: #000;
+.collection h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.collection h4 {
+    font-size: 1.2rem;
+    color: #666;
     margin-bottom: 20px;
 }
 
-.collections-grid {
+.content {
+    margin-top: 40px;
+}
+
+.text-section {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.image-section {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
-.collection-column {
-    flex: 1;
-    padding: 0 10px;
-}
-
-.collection-column a {
-    display: block;
+.image-section img {
+    max-width: 45%;
+    height: auto;
+    border: 1px solid #ddd;
     padding: 10px;
-    font-size: 1.2rem;
-    color: #000;
-    text-decoration: none;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 15px;
+    border-radius: 5px;
 }
 
-.collection-column a:hover {
-    background-color: #eee;
+.image-section img:hover {
+    background-color: #f0f0f0;
+}
+
+.newsletter {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 250px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #555;
+}
+
+.ebay-link {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.ebay-link a {
     color: #333;
+    text-decoration: none;
+}
+
+.ebay-link a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-    .collections-grid {
+    .image-section {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .image-section img {
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 }
