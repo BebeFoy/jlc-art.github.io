@@ -1,53 +1,136 @@
-<!DOCTYPE html> 
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JLC-Art Collections</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <div class="container">
-    
-    <header>
-      <div class="branding">
-        <h1>JLC-Art</h1>
-        <h2>Jonathan Lejon Christian Artwork Codex</h2>
-      </div>
-    </header>
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
 
-    <!-- Collections Section -->
-    <section class="collections-section">
-      <div class="collections-column">
-        <ul>
-          <li><a href="collection-details.html">Collection 1: The Essence of Time</a>
-            <p class="description">A journey through the evolution of time.</p></li>
-          <li><a href="collection-details.html">Collection 2: The Silent Cosmos</a>
-            <p class="description">A collection exploring the unknown realms of space.</p></li>
-          <!-- Add more collection entries as necessary -->
-        </ul>
-      </div>
+/* Container */
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
 
-      <div class="collections-column">
-        <ul>
-          <li><a href="collection-details.html">Collection 13: Echoes of the Sea</a>
-            <p class="description">A tribute to the mysteries of the ocean.</p></li>
-          <!-- Add more collection entries as necessary -->
-        </ul>
-      </div>
-    </section>
+/* Header Branding */
+.branding {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  text-align: left;
+}
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-      <form>
-        <input type="email" placeholder="Enter your email">
-        <button type="submit">Subscribe</button>
-      </form>
-      <p class="newsletter-label">Newsletter</p>
-    </section>
+.branding h1 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 3px;
+}
 
-  </div>
+.branding h2 {
+  font-size: 0.7rem;
+  color: #555;
+}
 
-</body>
-</html>
+/* Collections Section */
+.collections-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+
+.collections-column {
+  width: 48%;
+}
+
+.collections-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.collections-column li {
+  margin-bottom: 20px;
+}
+
+.collections-column a {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.collections-column a:hover {
+  text-decoration: underline;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #777;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  border-top: 1px solid #ddd;
+  margin-top: 50px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.newsletter-section form {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.newsletter-section input[type="email"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px;
+}
+
+.newsletter-section button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.newsletter-section button:hover {
+  background-color: #2980b9;
+}
+
+.newsletter-label {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .collections-section {
+    flex-direction: column;
+  }
+
+  .collections-column {
+    width: 100%;
+  }
+
+  .branding h1 {
+    font-size: 0.9rem;
+  }
+
+  .branding h2 {
+    font-size: 0.65rem;
+  }
+}
