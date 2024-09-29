@@ -6,131 +6,114 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
   color: #333;
-  line-height: 1.6;
+  padding: 20px;
+  font-size: 14px;
 }
 
 /* Container */
 .container {
-  width: 85%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Header Branding */
-.branding {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  text-align: right;
+/* Header */
+header {
+  margin-bottom: 60px;
 }
 
-.branding h1 {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.branding h2 {
-  font-size: 0.85rem;
-  color: #555;
-}
-
-/* Collections Section */
-.collections-section {
-  display: flex;
-  justify-content: space-between;
-  margin: 40px 0;
-}
-
-.collections-column {
-  width: 48%;
-}
-
-.collections-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.collections-column li {
-  margin-bottom: 20px;
-}
-
-.collections-column a {
-  font-size: 1.1rem;
-  color: #2c3e50;
-  text-decoration: none;
+.title {
+  font-size: 1.5rem;
   font-weight: bold;
+  color: #111;
+  text-align: left;
 }
 
-.collections-column a:hover {
-  text-decoration: underline;
+.subtitle {
+  font-size: 0.8rem;
+  color: #555;
+  text-align: left;
+  opacity: 0.7;
 }
 
-.description {
-  font-size: 0.95rem;
-  color: #777;
-  margin-top: 5px;
-  line-height: 1.4;
+/* Collection List */
+.collection-list {
+  margin-top: 20px;
+}
+
+.collection-list a {
+  display: block;
+  font-size: 1rem;
+  color: #111;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.collection-list a:hover {
+  background-color: #f5f5f5;
+  border-color: #666;
 }
 
 /* Newsletter Section */
-.newsletter-section {
-  border-top: 1px solid #ddd;
-  margin-top: 50px;
-  padding-top: 20px;
-  text-align: center;
+#newsletter {
+  margin-top: 40px;
 }
 
-.newsletter-section form {
-  display: inline-flex;
+#newsletter h2 {
+  margin-bottom: 20px;
+}
+
+#newsletterForm {
+  display: flex;
+  justify-content: center;
   gap: 10px;
 }
 
-.newsletter-section input[type="email"] {
+#newsletterForm input {
   padding: 10px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 250px;
+  border-radius: 5px;
+  flex-grow: 1;
 }
 
-.newsletter-section button {
+#newsletterForm button {
   padding: 10px 20px;
-  background-color: #3498db;
-  color: #fff;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  background-color: #111;
+  color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.newsletter-section button:hover {
-  background-color: #2980b9;
+#newsletterForm button:hover {
+  background-color: #333;
 }
 
-.newsletter-label {
-  font-size: 0.8rem;
-  color: #555;
-  margin-top: 10px;
+/* eBay Section */
+#ebay {
+  margin-top: 40px;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .collections-section {
-    flex-direction: column;
-  }
+#ebay h2 {
+  margin-bottom: 20px;
+}
 
-  .collections-column {
-    width: 100%;
-  }
+#ebay a {
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px dashed #111;
+}
 
-  .branding h1 {
-    font-size: 1rem;
-  }
-
-  .branding h2 {
-    font-size: 0.75rem;
-  }
+#ebay a:hover {
+  color: #666;
+  border-color: #666;
 }
