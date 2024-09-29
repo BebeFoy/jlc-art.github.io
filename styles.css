@@ -22,18 +22,18 @@ body {
 .branding {
   position: absolute;
   top: 10px;
-  right: 20px;
-  text-align: right;
+  left: 20px;
+  text-align: left;
 }
 
 .branding h1 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #333;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .branding h2 {
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   color: #555;
 }
 
@@ -127,10 +127,10 @@ body {
   }
 
   .branding h1 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .branding h2 {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
   }
 }
