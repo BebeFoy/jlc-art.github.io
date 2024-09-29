@@ -1,53 +1,44 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JLC-Art Collections</title>
+  <meta name="description" content="JLC – Art (Jonathan Lejon Christian Art Archive)">
+  <title>JLC – Art Archive</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <div class="container">
-    
+  <main class="container">
+    <!-- Header -->
     <header>
-      <div class="branding">
-        <h1>JLC-Art</h1>
-        <h2>Jonathan Lejon Christian Artwork Codex</h2>
-      </div>
+      <h1 class="title">JLC – Art</h1>
+      <h2 class="subtitle">(Jonathan Lejon Christian Art Archive)</h2>
     </header>
 
-    <!-- Collections Section -->
-    <section class="collections-section">
-      <div class="collections-column">
-        <ul>
-          <li><a href="collection-details.html">Collection 1: The Essence of Time</a>
-            <p class="description">A journey through the evolution of time.</p></li>
-          <li><a href="collection-details.html">Collection 2: The Silent Cosmos</a>
-            <p class="description">A collection exploring the unknown realms of space.</p></li>
-          <!-- Add more collection entries as necessary -->
-        </ul>
-      </div>
-
-      <div class="collections-column">
-        <ul>
-          <li><a href="collection-details.html">Collection 13: Echoes of the Sea</a>
-            <p class="description">A tribute to the mysteries of the ocean.</p></li>
-          <!-- Add more collection entries as necessary -->
-        </ul>
+    <!-- Collection Section -->
+    <section id="collections">
+      <h2>Art Collections</h2>
+      <div id="collectionGrid" class="collection-list">
+        <!-- Collection items will be injected here by JavaScript -->
       </div>
     </section>
 
     <!-- Newsletter Section -->
-    <section class="newsletter-section">
-      <form>
-        <input type="email" placeholder="Enter your email">
+    <section id="newsletter">
+      <h2>Join the Newsletter</h2>
+      <form id="newsletterForm">
+        <input type="email" id="emailInput" placeholder="Enter your email">
         <button type="submit">Subscribe</button>
       </form>
-      <p class="newsletter-label">Newsletter</p>
     </section>
 
-  </div>
+    <!-- eBay Section -->
+    <section id="ebay">
+      <h2>Available on eBay</h2>
+      <p>Explore my latest art auctions on <a href="https://www.ebay.com/" target="_blank">eBay</a></p>
+    </section>
+  </main>
 
+  <script src="scripts.js"></script>
 </body>
 </html>
