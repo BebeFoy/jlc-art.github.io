@@ -1,72 +1,80 @@
-/* General Reset */
-* {
+/* Ensure the container takes full screen height and centers content */
+body, html {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0; /* Solid background color */
-  color: #333;
-  padding: 20px;
-  font-size: 14px;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Align items to the top */
-  min-height: 100vh;
-  position: relative;
+  align-items: center;
+  font-family: Arial, sans-serif;
 }
 
-/* Header with Name */
-.header-name {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  font-size: 1rem;
-  color: #aaa; /* Grey tone for discretion */
-}
-
-/* Container */
 .container {
-  max-width: 900px;
-  width: 100%;
-  background-color: transparent; /* Make container transparent */
-  padding: 20px;
-  margin-top: 120px; /* Space from top */
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Collections Section */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: gray;
+}
+
 .collections-section {
   display: flex;
-  flex-direction: column; /* Stack entries vertically */
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.collection-entry {
-  background-color: #fff; /* White background for entries */
-  padding: 15px;
-  margin-bottom: 20px; /* Space between each entry */
-  border-radius: 8px; /* Rounded corners for entries */
-  opacity: 0.95; /* Slightly transparent for soft blending */
+.collections-column {
+  width: 50%;
 }
 
-/* Entry Title */
-.collection-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #111;
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-/* Entry Date and Details */
-.collection-details {
-  font-size: 0.9rem;
-  color: #777;
-  margin-top: 5px;
+li {
+  margin-bottom: 15px;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .collection-entry {
-    padding: 10px;
-  }
+.description {
+  margin: 5px 0 10px 0;
+  font-style: italic;
+  color: #555;
+}
+
+.newsletter-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+input[type="email"] {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
